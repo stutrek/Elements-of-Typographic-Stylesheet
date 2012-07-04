@@ -8,12 +8,7 @@ html:not(.disable_user_stylesheet) h2,
 html:not(.disable_user_stylesheet) h3, 
 html:not(.disable_user_stylesheet) h4, 
 html:not(.disable_user_stylesheet) h5, 
-html:not(.disable_user_stylesheet) h6, 
-html:not(.disable_user_stylesheet) textarea, 
-html:not(.disable_user_stylesheet) .title, 
-html:not(.disable_user_stylesheet) .tagline, 
-html:not(.disable_user_stylesheet) ul, 
-html:not(.disable_user_stylesheet) ol {
+html:not(.disable_user_stylesheet) h6 {
 	-webkit-font-feature-settings: 'clig', 'lnum', 'pnum';
 	font-feature-settings: 'clig', 'lnum', 'pnum';
 }
@@ -21,6 +16,15 @@ html:not(.disable_user_stylesheet) table {
 	-webkit-font-feature-settings: 'tnum';
 	font-feature-settings: 'tnum';
 }
+html:not(.disable_user_stylesheet) ul:not(.buttons) > li,
+html:not(.disable_user_stylesheet) ol > li {
+	line-height: 1.5;
+}
+html:not(.disable_user_stylesheet) p, 
+html:not(.disable_user_stylesheet) li {
+	max-width: 50em;
+}
+/* p */
 html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline) {
 	text-align: justify;
 	margin-bottom: 1em !important;
@@ -31,19 +35,13 @@ html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline) {
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
-html:not(.disable_user_stylesheet) ul:not(.buttons) > li,
-html:not(.disable_user_stylesheet) ol > li {
-	line-height: 1.5;
-}
-html:not(.disable_user_stylesheet) p, 
-html:not(.disable_user_stylesheet) li {
-	max-width: 50em;
-}
+/* p+p */
 html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
 	text-indent: 1.25em;
 	margin-top: -1em !important;
 	margin-bottom: 0em !important;
 }
+/* p+p+p */
 html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
 	margin-top: 0 !important;
 	text-indent: 1.25em;
