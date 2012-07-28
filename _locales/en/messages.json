@@ -1,0 +1,14 @@
+{
+   "extDescription": {
+      "description": "Extension description.",
+      "message": "Make the web far more readable and beautiful."
+   },
+   "extName": {
+      "description": "Extension name.",
+      "message": "The Elements of Typographic Stylesheet"
+   },
+   "tooltip": {
+      "description": "Tooltip of browser action icon.",
+      "message": "Click to enable / disable The Elements of Typographic Stylesheet."
+   }
+}

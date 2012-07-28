@@ -1,0 +1,23 @@
+{
+	"background_page": "iconController.html",
+	"browser_action": {
+		"default_icon": "img/enabled.png",
+		"default_title": "__MSG_tooltip__"
+	},
+	"content_scripts": [ {
+		"all_frames": true,
+		"js": [ "content.js" ],
+		"matches": [ "http://*/*", "https://*/*" ],
+		"run_at": "document_start",
+		"css": ["The Elements of Typographic Stylesheet/theelementsoftypographicstylesheet.css"]
+	} ],
+	"default_locale": "en",
+	"description": "__MSG_extDescription__",
+	"icons": {
+		"128": "img/icon128.png",
+		"48": "img/icon48.png"
+	},
+	"name": "__MSG_extName__",
+	"permissions": [ "tabs", "http://*/", "https://*/" ],
+	"version": "1.0"
+}
