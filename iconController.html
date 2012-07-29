@@ -1,31 +1,28 @@
 <script type="text/javascript">
 var activeTabId = null;
 
-function updateIcon( newState ) {
-	var iconPath = newState ? "img/enabled.png" : "img/disabled.png";
-	chrome.pageAction.setIcon({path: iconPath, tabId: activeTabId});
-}
-
-function updateIconFromResponse( response ) {
-	updateIcon(response.enabled);
+function getUpdateEventListener( tabId ) {
+	return function updateIconFromResponse( response ) {
+		var iconPath = response.enabled ? "img/enabled.png" : "img/disabled.png";
+		chrome.pageAction.setIcon({path: iconPath, tabId: tabId});
+		chrome.pageAction.show(tabId);
+	}
 }
 
 chrome.pageAction.onClicked.addListener(function(tab){
-    chrome.tabs.sendMessage(activeTabId, {type: 'toggle'}, updateIconFromResponse);
+	chrome.tabs.getCurrent(function() {
+		chrome.tabs.sendMessage(tab.id, {type: 'toggle'}, getUpdateEventListener(tab.id));
+	});
 });
 
-chrome.tabs.onHighlighted.addListener( function( activeInfo ) {
+chrome.tabs.onActivated.addListener( function( activeInfo ) {
 	console.log(activeInfo);
 	activeTabId = activeInfo.tabIds[0];
-	chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, updateIconFromResponse);
-	chrome.pageAction.show(activeTabId);
+	chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, getUpdateEventListener(activeTabId));
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-	if (changeInfo.status === 'url' && tabId === activeTabId) {
-		chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, updateIconFromResponse);
-		chrome.pageAction.show(activeTabId);
-	}
+	chrome.tabs.sendMessage(tabId, {type: 'getEnabled'}, getUpdateEventListener(tabId));
 });
 
 </script>
