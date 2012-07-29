@@ -1,6 +1,6 @@
 {
 	"background_page": "iconController.html",
-	"browser_action": {
+	"page_action": {
 		"default_icon": "img/enabled.png",
 		"default_title": "__MSG_tooltip__"
 	},
@@ -9,7 +9,7 @@
 		"js": [ "content.js" ],
 		"matches": [ "http://*/*", "https://*/*" ],
 		"run_at": "document_start",
-		"css": ["The Elements of Typographic Stylesheet/theelementsoftypographicstylesheet.css"]
+		"css": ["stylesheet/theelementsoftypographicstylesheet.css"]
 	} ],
 	"default_locale": "en",
 	"description": "__MSG_extDescription__",

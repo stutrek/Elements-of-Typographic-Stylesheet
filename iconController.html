@@ -1,28 +1,30 @@
 <script type="text/javascript">
-
 var activeTabId = null;
 
 function updateIcon( newState ) {
 	var iconPath = newState ? "img/enabled.png" : "img/disabled.png";
-	chrome.browserAction.setIcon({path: iconPath});
+	chrome.pageAction.setIcon({path: iconPath, tabId: activeTabId});
 }
 
 function updateIconFromResponse( response ) {
 	updateIcon(response.enabled);
 }
 
-chrome.browserAction.onClicked.addListener(function(tab){
+chrome.pageAction.onClicked.addListener(function(tab){
     chrome.tabs.sendMessage(activeTabId, {type: 'toggle'}, updateIconFromResponse);
 });
 
-chrome.tabs.onActivated.addListener( function( activeInfo ) {
-	activeTabId = activeInfo.tabId;
+chrome.tabs.onHighlighted.addListener( function( activeInfo ) {
+	console.log(activeInfo);
+	activeTabId = activeInfo.tabIds[0];
 	chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, updateIconFromResponse);
+	chrome.pageAction.show(activeTabId);
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-	if (changeInfo.status === 'loading' && tabId === activeTabId) {
+	if (changeInfo.status === 'url' && tabId === activeTabId) {
 		chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, updateIconFromResponse);
+		chrome.pageAction.show(activeTabId);
 	}
 });
 
