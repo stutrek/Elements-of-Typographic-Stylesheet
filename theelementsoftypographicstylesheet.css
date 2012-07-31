@@ -43,10 +43,10 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 	line-height: 1.5 !important;
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
+
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
-
 	-webkit-hyphenate-limit-after: 4;
 	-webkit-hyphenate-limit-before: 4;
 	-moz-hyphenate-limit-after: 4;
