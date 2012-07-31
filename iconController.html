@@ -15,19 +15,19 @@ function getUpdateEventListener( tab ) {
 
 chrome.pageAction.onClicked.addListener(function(tab){
 	chrome.tabs.getCurrent(function() {
-		chrome.tabs.sendMessage(tab.id, {type: 'toggle'}, getUpdateEventListener(tab));
+		chrome.tabs.sendMessage(tab.id, {type: 'toggle', url:tab.url}, getUpdateEventListener(tab));
 	});
 });
 
 chrome.tabs.onActivated.addListener( function( activeInfo ) {
 	activeTabId = activeInfo.tabId || activeInfo.tabIds[0];
 	chrome.tabs.get( activeTabId, function(tab) {
-		chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled'}, getUpdateEventListener(tab));
+		chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled', url: tab.url}, getUpdateEventListener(tab));
 	})
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-	chrome.tabs.sendMessage(tabId, {type: 'getEnabled'}, getUpdateEventListener(tab));
+	chrome.tabs.sendMessage(tabId, {type: 'getEnabled', url: tab.url}, getUpdateEventListener(tab));
 });
 
 </script>

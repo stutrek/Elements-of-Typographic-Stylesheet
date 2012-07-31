@@ -2,7 +2,7 @@
 	var localStorageName = 'eotss_'+window.location.host;
 	
 	function isEnabled() {
-		return document.documentElement.classList.contains('eotss_enabled');
+		return document.documentElement.classList.contains('eotss_enabled');;
 	}
 	
 	function enable(){
@@ -42,7 +42,7 @@
 	    throw new Error('Unknown message type! '+request.type);
 	});
 	
-	if (isEnabled()) {
+	if (!localStorage[localStorageName]) {
 		enable();
 	} else {
 		disable();
