@@ -81,11 +81,11 @@ html.eotss_enabled a+h6 {
 }
 
 
-/* (block level elements that were given display:inline) inside a p will inherit the 1.5em text indent. This removes that. */
+/* (block level elements that were given display:inline) inside a p will inherit the 1.25em text indent. This removes that. */
 html.eotss_enabled p * {
 	text-indent: 0; 
 }
-/* sub, sup should not push lines above and below them */
+/* sub, sup should not push lines around */
 html.eotss_enabled sub, html.eotss_enabled sup {
 	line-height: 0;
 }
