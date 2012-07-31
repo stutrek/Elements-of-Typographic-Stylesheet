@@ -1,43 +1,43 @@
-html:not(.disable_user_stylesheet) body {
+html.eotss_enabled body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-feature-settings: 'clig', 'dlig', 'onum';
 	font-feature-settings: 'clig', 'dlig', 'onum';
 }
-html:not(.disable_user_stylesheet) h1, 
-html:not(.disable_user_stylesheet) h2, 
-html:not(.disable_user_stylesheet) h3, 
-html:not(.disable_user_stylesheet) h4, 
-html:not(.disable_user_stylesheet) h5, 
-html:not(.disable_user_stylesheet) h6, 
-html:not(.disable_user_stylesheet) textarea, 
-html:not(.disable_user_stylesheet) .title, 
-html:not(.disable_user_stylesheet) .tagline, 
-html:not(.disable_user_stylesheet) ul, 
-html:not(.disable_user_stylesheet) ol {
+html.eotss_enabled h1, 
+html.eotss_enabled h2, 
+html.eotss_enabled h3, 
+html.eotss_enabled h4, 
+html.eotss_enabled h5, 
+html.eotss_enabled h6, 
+html.eotss_enabled textarea, 
+html.eotss_enabled .title, 
+html.eotss_enabled .tagline, 
+html.eotss_enabled ul, 
+html.eotss_enabled ol {
 	-webkit-font-feature-settings: 'clig', 'lnum', 'pnum';
 	font-feature-settings: 'clig', 'lnum', 'pnum';
 }
-html:not(.disable_user_stylesheet) table {
+html.eotss_enabled table {
 	-webkit-font-feature-settings: 'tnum';
 	font-feature-settings: 'tnum';
 }
 
-html:not(.disable_user_stylesheet) ul:not(.buttons) > li,
-html:not(.disable_user_stylesheet) ol > li,
-html:not(.disable_user_stylesheet) dd {
+html.eotss_enabled ul:not(.buttons) > li,
+html.eotss_enabled ol > li,
+html.eotss_enabled dd {
 	line-height: 1.5;
 }
-html:not(.disable_user_stylesheet) dd {
+html.eotss_enabled dd {
 	text-align: justify;
 }
-html:not(.disable_user_stylesheet) p, 
-html:not(.disable_user_stylesheet) dd, 
-html:not(.disable_user_stylesheet) li {
+html.eotss_enabled p, 
+html.eotss_enabled dd, 
+html.eotss_enabled li {
 	max-width: 50em;
 }
 
 /* p */
-html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline) {
+html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 	text-align: justify;
 	margin-bottom: 1em !important;
 	line-height: 1.5 !important;
@@ -55,43 +55,38 @@ html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline) {
 	hyphenate-limit-before: 4;
 }
 /* p+p */
-html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
+html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
 	text-indent: 1.25em;
 	margin-top: -1em !important;
-	margin-bottom: 0em !important;
-}
-/* p+p+p */
-html:not(.disable_user_stylesheet) p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
-	margin-top: 0 !important;
-	text-indent: 1.25em;
 }
 
 /*  CSS Resets set margin-top to 0 and many sites rely on the abominable p margin 
-	Many times an anchor is right before a headline.
+	Many times an anchor is right before a headline for #hashed urls
 */
-html:not(.disable_user_stylesheet) p+h1, 
-html:not(.disable_user_stylesheet) p+h2, 
-html:not(.disable_user_stylesheet) p+h3, 
-html:not(.disable_user_stylesheet) p+h4, 
-html:not(.disable_user_stylesheet) p+h5, 
-html:not(.disable_user_stylesheet) p+h6,
-html:not(.disable_user_stylesheet) a+h1, 
-html:not(.disable_user_stylesheet) a+h2, 
-html:not(.disable_user_stylesheet) a+h3, 
-html:not(.disable_user_stylesheet) a+h4, 
-html:not(.disable_user_stylesheet) a+h5, 
-html:not(.disable_user_stylesheet) a+h6 {
+html.eotss_enabled p+h1, 
+html.eotss_enabled p+h2, 
+html.eotss_enabled p+h3, 
+html.eotss_enabled p+h4, 
+html.eotss_enabled p+h5, 
+html.eotss_enabled p+h6,
+html.eotss_enabled p+table,
+html.eotss_enabled a+h1, 
+html.eotss_enabled a+h2, 
+html.eotss_enabled a+h3, 
+html.eotss_enabled a+h4, 
+html.eotss_enabled a+h5, 
+html.eotss_enabled a+h6 {
 	margin-top: 1em !important;
 	margin-bottom: 1em !important;
 }
 
 
 /* (block level elements that were given display:inline) inside a p will inherit the 1.5em text indent. This removes that. */
-html:not(.disable_user_stylesheet) p * {
+html.eotss_enabled p * {
 	text-indent: 0; 
 }
-/* sub, sup */
-html:not(.disable_user_stylesheet) sub, html:not(.disable_user_stylesheet) sup {
+/* sub, sup should not push lines above and below them */
+html.eotss_enabled sub, html.eotss_enabled sup {
 	line-height: 0;
 }
 
