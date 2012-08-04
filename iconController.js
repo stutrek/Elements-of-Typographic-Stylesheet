@@ -37,6 +37,10 @@ chrome.pageAction.onClicked.addListener(function(tab){
 chrome.tabs.onActivated.addListener( function( activeInfo ) {
 	activeTabId = activeInfo.tabId || activeInfo.tabIds[0];
 	chrome.tabs.get( activeTabId, function(tab) {
+		if ( tab.url.substring(0, 4) !== 'http') {
+			chrome.pageAction.hide(tab.id);
+			return;
+		}
 		enableOrDisableTab( tab );
 	})
 });
