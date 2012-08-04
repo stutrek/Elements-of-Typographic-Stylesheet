@@ -8,7 +8,6 @@
 	};
 	
 	safari.self.addEventListener( 'message', function(message){
-		console.log(message);
 	    if (message.name === "enable"){
 	        enable();
 	        return;
