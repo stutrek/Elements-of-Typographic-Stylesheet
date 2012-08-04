@@ -1,33 +1,46 @@
-<script type="text/javascript">
 var activeTabId = null;
+var HOST_REGEX = /https?:\/\/([^\/]+)*/
 
-function getUpdateEventListener( tab ) {
-	return function updateIconFromResponse( response ) {
-		// these always !== each other. Unless you console.log them first.
-		if (response.url != tab.url) {
-			return;
-		}
-		var iconPath = response.enabled ? "img/enabled.png" : "img/disabled.png";
-		chrome.pageAction.setIcon({path: iconPath, tabId: tab.id});
-		chrome.pageAction.show(tab.id);
+function getEnabled( tab ) {
+	var host = HOST_REGEX.exec(tab.url)[1];
+	
+	if (localStorage[host] === "off") {
+		return false;
+	} else {
+		return true;
 	}
 }
 
+function enableOrDisableTab( tab ) {
+	if (getEnabled(tab)) {
+		chrome.tabs.sendMessage(tab.id, {type: 'enable', url: tab.url});
+		chrome.pageAction.setIcon({path: "img/enabled.png", tabId: tab.id});
+	} else {
+		chrome.tabs.sendMessage(tab.id, {type: 'disable', url: tab.url});
+		chrome.pageAction.setIcon({path: "img/disabled.png", tabId: tab.id});
+	}
+	chrome.pageAction.show(tab.id);
+}
+
 chrome.pageAction.onClicked.addListener(function(tab){
-	chrome.tabs.getCurrent(function() {
-		chrome.tabs.sendMessage(tab.id, {type: 'toggle', url:tab.url}, getUpdateEventListener(tab));
-	});
+	var host = HOST_REGEX.exec(tab.url)[1];
+	
+	if (getEnabled(tab)) {
+		localStorage[host] = "off";
+	} else {
+		delete localStorage[host];
+	}
+	
+	enableOrDisableTab( tab );
 });
 
 chrome.tabs.onActivated.addListener( function( activeInfo ) {
 	activeTabId = activeInfo.tabId || activeInfo.tabIds[0];
 	chrome.tabs.get( activeTabId, function(tab) {
-		chrome.tabs.sendMessage(activeTabId, {type: 'getEnabled', url: tab.url}, getUpdateEventListener(tab));
+		enableOrDisableTab( tab );
 	})
 });
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-	chrome.tabs.sendMessage(tabId, {type: 'getEnabled', url: tab.url}, getUpdateEventListener(tab));
+	enableOrDisableTab( tab );
 });
-
-</script>
