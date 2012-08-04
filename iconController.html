@@ -27,12 +27,8 @@ function setImage( event ) {
 function enableOrDisable( event ) {
 	if (getEnabled(event)) {
 		event.target.browserWindow.activeTab.page.dispatchMessage('enable');
-		//chrome.tabs.sendMessage(tab.id, {type: 'enable', url: tab.url});
-		//event.target.disabled = false;
 	} else {
 		event.target.browserWindow.activeTab.page.dispatchMessage('disable');
-		//chrome.tabs.sendMessage(tab.id, {type: 'disable', url: tab.url});
-		//event.target.disabled = true;
 	}
 	setImage( event );
 }
@@ -53,20 +49,4 @@ safari.application.addEventListener( "command", function( event ){
 }, false);
 
 safari.application.addEventListener("validate", enableOrDisable, false);
-/*
-chrome.tabs.onActivated.addListener( function( activeInfo ) {
-	activeTabId = activeInfo.tabId || activeInfo.tabIds[0];
-	chrome.tabs.get( activeTabId, function(tab) {
-		if ( tab.url.substring(0, 4) !== 'http') {
-			chrome.pageAction.hide(tab.id);
-			return;
-		}
-		enableOrDisableTab( tab );
-	})
-});
-
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-	enableOrDisableTab( tab );
-});
-*/
 </script>
