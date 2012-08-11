@@ -38,7 +38,7 @@ html.eotss_enabled li {
 
 /* p */
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
-	text-align: justify;
+	text-align: justify !important;
 	margin-bottom: 1em !important;
 	line-height: 1.5 !important;
 	padding-top: 0 !important;
