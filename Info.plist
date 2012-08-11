@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Author</key>
+	<string>Stu Kabakoff</string>
 	<key>Builder Version</key>
 	<string>7536.25</string>
 	<key>CFBundleDisplayName</key>
@@ -11,15 +13,15 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
 		<real>1048576</real>
 		<key>Global Page</key>
-		<string>iconController.html</string>
+		<string>safariController.html</string>
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
@@ -28,7 +30,7 @@
 				<key>Identifier</key>
 				<string>toggle</string>
 				<key>Image</key>
-				<string>img/enabled.png</string>
+				<string>img/safari-enabled.png</string>
 				<key>Label</key>
 				<string>Elements of Typographic Stylesheet</string>
 			</dict>
@@ -48,6 +50,8 @@
 			<string>stylesheet/theelementsoftypographicstylesheet.css</string>
 		</array>
 	</dict>
+	<key>Description</key>
+	<string>Make the web look like a book.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
