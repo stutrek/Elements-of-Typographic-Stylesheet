@@ -37,6 +37,7 @@ html.eotss_enabled dd {
 }
 html.eotss_enabled p, 
 html.eotss_enabled dd, 
+html.eotss_enabled blockquote,
 html.eotss_enabled li {
 	max-width: 50em;
 }
