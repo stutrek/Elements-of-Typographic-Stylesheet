@@ -3,7 +3,7 @@
 		"scripts": ["chromeController.js"]
 	},
 	"page_action": {
-		"default_icon": "img/enabled.png",
+		"default_icon": "img/Chrome/enabled.png",
 		"default_title": "__MSG_tooltip__"
 	},
 	"content_scripts": [ {
