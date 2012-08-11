@@ -43,12 +43,20 @@ html.eotss_enabled li {
 
 /* p */
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
+<<<<<<< HEAD
 	margin-bottom: 1em !important;
 	line-height: 1.5 !important;
 	padding-bottom: 0 !important;
 	display: block;
 	
 	/* light hyphenation. Real estate is cheap on screens and paragraphs can get wide */
+=======
+	text-align: justify !important;
+	margin-bottom: 1em !important;
+	line-height: 1.5 !important;
+	padding-bottom: 0 !important;
+
+>>>>>>> e68e3bc8cb4eb6498c08047acd1c8fe97dd7f66f
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
@@ -65,8 +73,13 @@ html.eotss_enabled.eotss_safari {
 }
 /* p+p */
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
+<<<<<<< HEAD
 	text-indent: 1.25em;
 	padding-top: 0 !important;
+=======
+	padding-top: 0 !important;
+	text-indent: 1.25em !important;
+>>>>>>> e68e3bc8cb4eb6498c08047acd1c8fe97dd7f66f
 	margin-top: -1em !important;
 }
 
