@@ -30,7 +30,7 @@
 				<key>Identifier</key>
 				<string>toggle</string>
 				<key>Image</key>
-				<string>img/safari-enabled.png</string>
+				<string>img/safari/enabled.png</string>
 				<key>Label</key>
 				<string>Elements of Typographic Stylesheet</string>
 			</dict>
