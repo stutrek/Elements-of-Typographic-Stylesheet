@@ -62,7 +62,7 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.
 }
 
 /*  CSS Resets set margin-top to 0 and many sites rely on the abominable p margin 
-	Many times an anchor is right before a headline.
+	Many times an anchor is right before a headline for #hashed urls
 */
 html.eotss_enabled p+h1, 
 html.eotss_enabled p+h2, 
@@ -81,11 +81,11 @@ html.eotss_enabled a+h6 {
 }
 
 
-/* (block level elements that were given display:inline) inside a p will inherit the 1.5em text indent. This removes that. */
+/* (block level elements that were given display:inline) inside a p will inherit the 1.25em text indent. This removes that. */
 html.eotss_enabled p * {
 	text-indent: 0; 
 }
-/* sub, sup */
+/* sub, sup should not push lines around */
 html.eotss_enabled sub, html.eotss_enabled sup {
 	line-height: 0;
 }
