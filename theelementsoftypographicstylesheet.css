@@ -46,7 +46,6 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 	text-align: justify;
 	margin-bottom: 1em !important;
 	line-height: 1.5 !important;
-	padding-top: 0 !important;
 	padding-bottom: 0 !important;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -62,6 +61,7 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 /* p+p */
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
 	text-indent: 1.25em;
+	padding-top: 0 !important;
 	margin-top: -1em !important;
 }
 
