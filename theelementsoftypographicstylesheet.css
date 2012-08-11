@@ -1,8 +1,13 @@
 html.eotss_enabled body {
-	text-rendering: optimizeLegibility;
 	-webkit-font-feature-settings: 'clig', 'dlig', 'onum';
 	font-feature-settings: 'clig', 'dlig', 'onum';
 }
+
+/* 	This is slow. Best to put it in a timeout to give the UI time to update. */
+html.eotss_enabled.eotss_slow body {
+	text-rendering: optimizeLegibility;
+}
+
 html.eotss_enabled h1, 
 html.eotss_enabled h2, 
 html.eotss_enabled h3, 
