@@ -1,6 +1,6 @@
 html.eotss_enabled body {
-	-webkit-font-feature-settings: 'clig', 'dlig', 'onum';
-	font-feature-settings: 'clig', 'dlig', 'onum';
+	-webkit-font-feature-settings: 'clig', 'onum';
+	font-feature-settings: 'clig', 'onum';
 }
 
 /* 	This is slow. Best to put it in a timeout to give the UI time to update. */
@@ -13,7 +13,10 @@ html.eotss_enabled h2,
 html.eotss_enabled h3, 
 html.eotss_enabled h4, 
 html.eotss_enabled h5, 
-html.eotss_enabled h6, 
+html.eotss_enabled h6 {
+	-webkit-font-feature-settings: 'clig', 'dlig', 'lnum', 'pnum';
+	font-feature-settings: 'clig', 'dlig', 'lnum', 'pnum';
+}
 html.eotss_enabled textarea, 
 html.eotss_enabled .title, 
 html.eotss_enabled .tagline, 
@@ -22,6 +25,7 @@ html.eotss_enabled ol {
 	-webkit-font-feature-settings: 'clig', 'lnum', 'pnum';
 	font-feature-settings: 'clig', 'lnum', 'pnum';
 }
+
 html.eotss_enabled table {
 	-webkit-font-feature-settings: 'tnum';
 	font-feature-settings: 'tnum';
