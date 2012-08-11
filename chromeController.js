@@ -13,10 +13,10 @@ function getEnabled( tab ) {
 
 function enableOrDisableTab( tab ) {
 	if (getEnabled(tab)) {
-		chrome.tabs.sendMessage(tab.id, {type: 'enable', url: tab.url});
+		chrome.tabs.sendMessage(tab.id, {name: 'enable', url: tab.url});
 		chrome.pageAction.setIcon({path: "img/enabled.png", tabId: tab.id});
 	} else {
-		chrome.tabs.sendMessage(tab.id, {type: 'disable', url: tab.url});
+		chrome.tabs.sendMessage(tab.id, {name: 'disable', url: tab.url});
 		chrome.pageAction.setIcon({path: "img/disabled.png", tabId: tab.id});
 	}
 	chrome.pageAction.show(tab.id);
