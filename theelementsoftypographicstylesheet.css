@@ -47,6 +47,7 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 	margin-bottom: 1em !important;
 	line-height: 1.5 !important;
 	padding-bottom: 0 !important;
+	display: block;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
