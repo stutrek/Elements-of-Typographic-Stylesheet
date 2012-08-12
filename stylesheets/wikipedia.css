@@ -1,0 +1,12 @@
+html.eotss_enabled p+div.thumb {
+	text-indent: 1.25em;
+	padding-top: 0 !important;
+	margin-top: -1em !important;
+}
+html.eotss_enabled p+div.tleft {
+	padding: 1em 1em 1em 0;
+}
+
+html.eotss_enabled p+div.tright {
+	padding: 1em 0 1em 1em;
+}

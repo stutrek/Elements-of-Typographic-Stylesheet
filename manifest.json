@@ -12,6 +12,10 @@
 		"matches": [ "http://*/*", "https://*/*" ],
 		"run_at": "document_start",
 		"css": ["stylesheet/theelementsoftypographicstylesheet.css"]
+	}, {
+		"all_frames": true,
+		"matches": [ "http://*.wikipedia.org/*", "https://*.wikipedia.org/*" ],
+		"css": ["stylesheet/wikipedia.css"]
 	} ],
 	"default_locale": "en",
 	"description": "__MSG_extDescription__",

@@ -5,7 +5,7 @@ html.eotss_enabled body {
 
 /* 	This is slow. Best to put it in a timeout to give the UI time to update. */
 html.eotss_enabled.eotss_slow body {
-	text-rendering: optimizeLegibility;
+/* 	text-rendering: optimizeLegibility; */
 }
 
 html.eotss_enabled h1, 
