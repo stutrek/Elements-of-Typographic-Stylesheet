@@ -35,7 +35,6 @@ function enableOrDisable( event ) {
 
 safari.application.addEventListener( "command", function( event ){
 	if (event.command === "toggle_eotss") {
-		console.log(event);
 		var host = HOST_REGEX.exec(event.target.browserWindow.activeTab.url)[1];
 		
 		if (getEnabled(event)) {

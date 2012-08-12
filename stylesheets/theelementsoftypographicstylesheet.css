@@ -65,7 +65,7 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 	hyphenate-limit-before: 4;
 }
 /* move to the normal area when Chrome supports hyphenation */
-html.eotss_enabled.eotss_safari {
+html.eotss_enabled.eotss_safari p {
 	text-align: justify;
 }
 /* p+p */
