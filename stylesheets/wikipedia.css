@@ -15,16 +15,15 @@ html.eotss_enabled #mw-content-text p+div.quotebox+p {
 	top: -1em;
 }
 
-html.eotss_enabled p+div.thumb.tleft {
-	padding-top: 1.75em !important;
-	padding-right: 1.5em !important;
-	padding-bottom: 2em !important;
-	padding-left: 0 !important;
-	margin-top: -1em !important;
-	margin-right: 0 !important;
-	margin-bottom: 0 !important;
-	margin-left: 0 !important;
+html.eotss_enabled div.thumb.tleft {
+	margin: 1.5em 1.5em 0em 0 !important;
+	padding: 0 0 0 0 !important;
 }
+html.eotss_enabled p+div.thumb.tleft {
+	margin: 0.5em 1.5em 1em 0 !important;
+	padding: 0 0 0 0 !important;
+}
+
 html.eotss_enabled p+div.quotebox {
 	margin-top: 1em !important;
 	margin-right: 1em !important;
@@ -33,12 +32,6 @@ html.eotss_enabled p+div.quotebox {
 }
 
 html.eotss_enabled p+div.thumb.tright {
-	padding-top: 1.75em !important;
-	padding-right: 0 !important;
-	padding-bottom: 2em !important;
-	padding-left: 1.5em !important;
-	margin-top: -1em !important;
-	margin-right: 0 !important;
-	margin-bottom: 0 !important;
-	margin-left: 0 !important;
+	margin: 0.5em 0 1em 1.5em !important;
+	padding: 0 0 0 0 !important;
 }
