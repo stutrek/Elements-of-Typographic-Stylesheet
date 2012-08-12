@@ -11,11 +11,12 @@
 		"js": [ "content.js" ],
 		"matches": [ "http://*/*", "https://*/*" ],
 		"run_at": "document_start",
-		"css": ["stylesheet/theelementsoftypographicstylesheet.css"]
+		"css": ["stylesheets/theelementsoftypographicstylesheet.css"]
 	}, {
 		"all_frames": true,
 		"matches": [ "http://*.wikipedia.org/*", "https://*.wikipedia.org/*" ],
-		"css": ["stylesheet/wikipedia.css"]
+		"run_at": "document_start",
+		"css": ["stylesheets/wikipedia.css"]
 	} ],
 	"default_locale": "en",
 	"description": "__MSG_extDescription__",
