@@ -1,0 +1,117 @@
+html.eotss_enabled body {
+	-webkit-font-feature-settings: 'clig', 'onum';
+	font-feature-settings: 'clig', 'onum';
+}
+
+/* 	This is slow. Best to put it in a timeout to give the UI time to update. */
+html.eotss_enabled.eotss_slow body {
+	text-rendering: optimizeLegibility;
+}
+
+html.eotss_enabled h1, 
+html.eotss_enabled h2, 
+html.eotss_enabled h3, 
+html.eotss_enabled h4, 
+html.eotss_enabled h5, 
+html.eotss_enabled h6 {
+	-webkit-font-feature-settings: 'clig', 'dlig', 'lnum', 'pnum';
+	font-feature-settings: 'clig', 'dlig', 'lnum', 'pnum';
+}
+html.eotss_enabled textarea, 
+html.eotss_enabled .title, 
+html.eotss_enabled .tagline, 
+html.eotss_enabled ul, 
+html.eotss_enabled ol {
+	-webkit-font-feature-settings: 'clig', 'lnum', 'pnum';
+	font-feature-settings: 'clig', 'lnum', 'pnum';
+}
+
+html.eotss_enabled table {
+	-webkit-font-feature-settings: 'tnum';
+	font-feature-settings: 'tnum';
+}
+
+html.eotss_enabled ul:not(.buttons) > li,
+html.eotss_enabled ol > li,
+html.eotss_enabled dd {
+	line-height: 1.5;
+}
+html.eotss_enabled dd {
+	text-align: justify;
+}
+html.eotss_enabled p, 
+html.eotss_enabled dd, 
+html.eotss_enabled blockquote,
+html.eotss_enabled li {
+	max-width: 50em;
+}
+
+/* p */
+html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
+	margin-bottom: 1em !important;
+	line-height: 1.5 !important;
+	padding-bottom: 0 !important;
+	display: block;
+	
+	/* light hyphenation. Real estate is cheap on screens and paragraphs can get wide */
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-webkit-hyphenate-limit-after: 4;
+	-webkit-hyphenate-limit-before: 4;
+	-moz-hyphenate-limit-after: 4;
+	-moz-hyphenate-limit-before: 4;
+	hyphenate-limit-after: 4;
+	hyphenate-limit-before: 4;
+}
+/* move to the normal area when Chrome supports hyphenation */
+html.eotss_enabled.eotss_safari {
+	text-align: justify;
+}
+/* p+p */
+html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
+	text-indent: 1.25em;
+	padding-top: 0 !important;
+	margin-top: -1em !important;
+}
+
+/*  CSS Resets set margins to 0 and many sites rely on the abominable p margin 
+	Many times an anchor is right before a headline for #hashed urls
+	Lists are often inside runs of text */
+html.eotss_enabled p+h1, 
+html.eotss_enabled p+h2, 
+html.eotss_enabled p+h3, 
+html.eotss_enabled p+h4, 
+html.eotss_enabled p+h5, 
+html.eotss_enabled p+h6,
+html.eotss_enabled a+h1, 
+html.eotss_enabled a+h2, 
+html.eotss_enabled a+h3, 
+html.eotss_enabled a+h4, 
+html.eotss_enabled a+h5, 
+html.eotss_enabled a+h6 {
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+}
+
+/* ensure even spacing of lists and tables */
+html.eotss_enabled p+table,
+html.eotss_enabled p+ul,
+html.eotss_enabled p+ol {
+	margin-top: 0 !important;
+	margin-bottom: 1em !important;
+}
+
+/* (block level elements that were given display:inline) inside a p will inherit the 1.25em text indent. This removes that. */
+html.eotss_enabled p * {
+	text-indent: 0; 
+}
+/* sub, sup should not push lines around */
+html.eotss_enabled sub, html.eotss_enabled sup {
+	line-height: 0;
+}
+
+/* reddit */
+.linkflairlabel {
+	max-width: 50em !important;
+}
