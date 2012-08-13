@@ -65,5 +65,7 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://postmodem.net/eotss_safari/mainfest.plist</string>
 </dict>
 </plist>
