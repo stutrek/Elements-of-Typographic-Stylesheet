@@ -1,10 +1,7 @@
 /* inline images and the following paragraphs */
-html.eotss_enabled body.mediawiki div.thumb.tleft {
-	margin: 1.5em 1.5em 0em 0 !important;
-	padding: 0 0 0 0 !important;
-}
+
 html.eotss_enabled body.mediawiki p+div.thumb.tleft {
-	margin: 0.5em 1.5em 1em 0 !important;
+	margin: 1em 1.5em 1em 0 !important;
 	padding: 0 0 0 0 !important;
 }
 html.eotss_enabled body.mediawiki p+div.thumb.tright {
@@ -15,9 +12,6 @@ html.eotss_enabled body.mediawiki #mw-content-text p+div.thumb+p {
 	text-indent: 1.25em;
 	padding-top: 0 !important;
 	margin-top: 0 !important;
-	margin-bottom: -1em !important;
-	position: relative;
-	top: -1em;
 }
 
 
