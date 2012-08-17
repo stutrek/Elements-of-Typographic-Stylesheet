@@ -12,11 +12,6 @@
 		"matches": [ "http://*/*", "https://*/*" ],
 		"run_at": "document_start",
 		"css": ["stylesheets/theelementsoftypographicstylesheet.css"]
-	}, {
-		"all_frames": true,
-		"matches": [ "http://*.wikipedia.org/*", "https://*.wikipedia.org/*" ],
-		"run_at": "document_start",
-		"css": ["stylesheets/wikipedia.css"]
 	} ],
 	"default_locale": "en",
 	"description": "__MSG_extDescription__",
@@ -27,6 +22,6 @@
 	},
 	"name": "__MSG_extName__",
 	"permissions": [ "tabs", "http://*/", "https://*/" ],
-	"version": "1.3.4",
+	"version": "1.3.5",
 	"manifest_version": 2
 }

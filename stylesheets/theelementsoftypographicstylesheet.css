@@ -68,8 +68,19 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline) {
 html.eotss_enabled.eotss_safari p {
 	text-align: justify;
 }
-/* p+p */
-html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline) {
+
+p:not(.parent):not(.title):not(.tagline)+ *:not(p) +p:not(.parent):not(.title):not(.tagline) {
+	margin-top: 1em !important;
+}
+
+/* paragraphs and common float classes
+/* p+ p */          html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline),
+/* p+ .left  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=left] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .right +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=right] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .float +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=float] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .thumb +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=thumb] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .side  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=side] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .rail  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=rail] +p:not(.parent):not(.title):not(.tagline) {
 	text-indent: 1.25em;
 	padding-top: 0 !important;
 	margin-top: 0em !important;
@@ -80,7 +91,7 @@ html.eotss_enabled p img {
 }
 
 /* 	p + anything else. Make sure there's space after the p */
-html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline)+*:not(p) {
+html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+*:not(p) {
 	margin-top: 1em !important;
 }
 
