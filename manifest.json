@@ -16,9 +16,11 @@
 	"default_locale": "en",
 	"description": "__MSG_extDescription__",
 	"icons": {
-		"512": "img/icon512.png",
-		"128": "img/icon128.png",
-		"48": "img/icon48.png"
+		"512": "Icon-512.png",
+		"128": "Icon-128.png",
+		"64": "Icon-64.png"
+		"48": "Icon-48.png"
+		"32": "Icon-32.png"
 	},
 	"name": "__MSG_extName__",
 	"permissions": [ "tabs", "http://*/", "https://*/" ],
