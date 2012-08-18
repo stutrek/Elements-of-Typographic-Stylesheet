@@ -99,27 +99,6 @@ html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+*:not(p) {
 	margin-top: 1em !important;
 }
 
-/*  CSS Resets set margins to 0 and many sites rely on the abominable p margin 
-	Many times an anchor is right before a headline for #hashed urls
-	Lists are often inside runs of text */
-html.eotss_enabled p+h1, 
-html.eotss_enabled p+h2, 
-html.eotss_enabled p+h3, 
-html.eotss_enabled p+h4, 
-html.eotss_enabled p+h5, 
-html.eotss_enabled p+h6,
-html.eotss_enabled a+h1, 
-html.eotss_enabled a+h2, 
-html.eotss_enabled a+h3, 
-html.eotss_enabled a+h4, 
-html.eotss_enabled a+h5, 
-html.eotss_enabled a+h6,
-html.eotss_enabled p+table,
-html.eotss_enabled p+ul,
-html.eotss_enabled p+ol {
-	margin-bottom: 1em !important;
-}
-
 /* (block level elements that were given display:inline) inside a p will inherit the 1.25em text indent. This removes that. */
 html.eotss_enabled p * {
 	text-indent: 0; 
