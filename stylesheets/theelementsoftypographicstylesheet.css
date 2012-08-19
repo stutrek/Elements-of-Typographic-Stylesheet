@@ -89,10 +89,13 @@ p:not(.parent):not(.title):not(.tagline)+ *:not(p) +p:not(.parent):not(.title):n
 	padding-top: 0 !important;
 	margin-top: 0em !important;
 }
+/*
+I can't remember what this solved, but it breaks whenever an image is used for an ideograph.
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline) img {
 	margin-top: 1em !important;
 	margin-bottom: 1em !important;
 }
+*/
 
 /* 	p + anything else. Make sure there's space after the p */
 html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+*:not(p),
