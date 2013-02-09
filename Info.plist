@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Stu Kabakoff</string>
 	<key>Builder Version</key>
-	<string>7536.25</string>
+	<string>8536.26.17</string>
 	<key>CFBundleDisplayName</key>
 	<string>Elements of Typographic Stylesheet</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3.7</string>
+	<string>1.3.8</string>
 	<key>CFBundleVersion</key>
-	<string>1.3.7</string>
+	<string>1.3.8</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>

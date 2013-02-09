@@ -75,6 +75,7 @@ p:not(.parent):not(.title):not(.tagline)+ *:not(p) +p:not(.parent):not(.title):n
 
 /* paragraphs and common float classes
 /* p+ p */          html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+p:not(.parent):not(.title):not(.tagline),
+/* p+ img  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ img +p:not(.parent):not(.title):not(.tagline),
 /* p+ aside  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ aside +p:not(.parent):not(.title):not(.tagline),
 /* p+ in page link anchor +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ a[name]:not([href]) +p:not(.parent):not(.title):not(.tagline),
 /* p+ .left  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=left] +p:not(.parent):not(.title):not(.tagline),
@@ -84,6 +85,7 @@ p:not(.parent):not(.title):not(.tagline)+ *:not(p) +p:not(.parent):not(.title):n
 /* p+ .side  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=side] +p:not(.parent):not(.title):not(.tagline),
 /* p+ .rail  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=rail] +p:not(.parent):not(.title):not(.tagline),
 /* p+ .ad  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=ad] +p:not(.parent):not(.title):not(.tagline),
+/* p+ .inline  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=inline] +p:not(.parent):not(.title):not(.tagline),
 /* p+ .narrow  +p */  html.eotss_enabled p:not(.parent):not(.title):not(.tagline)+ [class*=narrow] +p:not(.parent):not(.title):not(.tagline) {
 	text-indent: 1.25em !important;
 	padding-top: 0 !important;
