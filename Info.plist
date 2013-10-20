@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Stu Kabakoff</string>
 	<key>Builder Version</key>
-	<string>8536.26.17</string>
+	<string>8536.30.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>Elements of Typographic Stylesheet</string>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
-		<real>1048576</real>
+		<real>5242880</real>
 		<key>Global Page</key>
 		<string>safariController.html</string>
 		<key>Toolbar Items</key>
